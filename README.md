@@ -1,1 +1,1 @@
-#Curso Alura:LESS: CSS simples e produtivo
+#Curso Alura - LESS: CSS simples e produtivo
