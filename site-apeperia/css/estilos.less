@@ -1,6 +1,7 @@
-@import "variaveis.less";
-@import "mixins.less";
-
+@import "variaveis";
+@import "mixins";
+@import "normalize";
+@import "media-queries";
 // Geral
 body {
   font-family: "Roboto Slab", serif;
@@ -35,6 +36,11 @@ header {
   height: 90px;
   width: 100%;
   position: absolute;
+
+  @media @mobile {
+    height: auto;
+  }
+
 }
 
 header .container {
@@ -97,7 +103,7 @@ header .container {
   padding: .6em;
   font-size: 1.2em;
   .borda-arredondada(2em);
-  .sombra-padrao;
+  &:extend(.sombra-padrao); //Agrupa tudo em uma regra, não repetindo código.
   font-weight: bold;
 }
 
@@ -229,7 +235,7 @@ header .container {
   height: 38px;
   font-size: 1.2em;
   .borda-arredondada();
-  .sombra-padrao;
+  &:extend(.sombra-padrao);
   margin-left: 2em;
 }
 
@@ -325,7 +331,7 @@ textarea {
   height: 38px;
   font-size: 1.2em;
   .borda-arredondada();
-  .sombra-padrao;
+  &:extend(.sombra-padrao);
 }
 
 // Footer
@@ -358,8 +364,8 @@ footer::before {
 }
 
 footer .container {
-  padding-top: 3em;
-  height: 6.5em;
+  padding-top: 16 * 3px;
+  height: 16 * 6.5px;
   position: relative;
 }
 
